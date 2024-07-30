@@ -88,5 +88,3 @@ Este projeto é uma API RESTful desenvolvida com AdonisJS 6 (Node.js) que permit
 ### Autenticação
 - Para acessar as rotas protegidas, você precisa incluir o token JWT no cabeçalho da requisição:
 
-### Licença
-- Este projeto está licenciado sob a Licença MIT.
