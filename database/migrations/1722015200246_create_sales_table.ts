@@ -14,7 +14,7 @@ export default class extends BaseSchema {
         .inTable('products')
         .onDelete('CASCADE')
       table.integer('quantidade').unsigned().notNullable()
-      table.decimal('preco_unitário', 10, 2).notNullable()
+      table.decimal('preco_unitario', 10, 2).notNullable()
       table.decimal('preco_total', 10, 2).notNullable()
       table.timestamp('data', { useTz: true }).notNullable()
       table.timestamps(true)

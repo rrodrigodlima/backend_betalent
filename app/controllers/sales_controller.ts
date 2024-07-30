@@ -7,10 +7,10 @@ export default class SalesController {
       'client_id',
       'product_id',
       'quantidade',
-      'preco_unitário',
+      'preco_unitario',
       'preco_total',
     ])
-    data.preco_total = data.quantidade * data.preco_unitário
+    data.preco_total = data.quantidade * data.preco_unitario
     const sale = await Sale.create(data)
     return response.created(sale)
   }
