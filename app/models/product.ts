@@ -11,10 +11,10 @@ export default class Product extends BaseModel {
   declare nome: string
 
   @column()
-  declare descrição: string
+  declare description: string
 
   @column()
-  declare preço: number
+  declare price: number
 
   @column()
   declare isDeleted: boolean
@@ -27,4 +27,7 @@ export default class Product extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   declare updatedAt: DateTime
+
+  @column.dateTime()
+  declare deletedAt: DateTime
 }

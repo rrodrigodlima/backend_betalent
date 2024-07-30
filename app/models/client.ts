@@ -16,13 +16,13 @@ export default class Client extends BaseModel {
   declare cpf: string
 
   @hasMany(() => Address)
-  declare addresses: HasMany<typeof Address>
+  declare endereço: HasMany<typeof Address>
 
   @hasMany(() => Phone)
-  declare phones: HasMany<typeof Phone>
+  declare telefone: HasMany<typeof Phone>
 
   @hasMany(() => Sale)
-  declare sales: HasMany<typeof Sale>
+  declare vendas: HasMany<typeof Sale>
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
