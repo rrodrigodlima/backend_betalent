@@ -20,9 +20,15 @@ Este projeto é uma API RESTful desenvolvida com AdonisJS 6 (Node.js) que permit
 5. Inicie o servidor: `npm run dev`
 
 ## Rotas
-### Autenticação
+### User
 - POST /signup: Cadastro de usuário
 - POST /login: Login do usuário
+```
+  {
+  "email": "usuario@exemplo.com",
+  "senha": "sua-senha"
+  }
+```
 
 ### Clientes
 - GET /clients: Listar todos os clientes
@@ -30,6 +36,26 @@ Este projeto é uma API RESTful desenvolvida com AdonisJS 6 (Node.js) que permit
 - POST /clients: Adicionar um cliente
 - PUT /clients/:id: Editar um cliente
 - DELETE /clients/:id: Excluir um cliente
+```
+{
+  "nome": "Nome do Cliente",
+  "cpf": "123.456.789-00",
+  "endereco": {
+    "rua": "Rua Exemplo",
+    "numero": "123",
+    "bairro": "Bairro",
+    "cidade": "Cidade",
+    "estado": "Estado",
+    "cep": "00000-000"
+  },
+  "telefones": [
+    {
+      "cliente": "1",
+      "numero": "123456789"
+    }
+  ]
+}  
+```
 
 ### Produtos
 - GET /products: Listar todos os produtos
@@ -37,6 +63,30 @@ Este projeto é uma API RESTful desenvolvida com AdonisJS 6 (Node.js) que permit
 - POST /products: Adicionar um produto
 - PUT /products/:id: Editar um produto
 - DELETE /products/:id: Exclusão lógica de um produto
+```
+{
+  "nome": "Nome do Produto",
+  "price": 100.00,
+  "description": "Descrição do Produto"
+}  
+```
 
 ### Vendas
 - POST /sales: Registrar uma venda
+```
+{
+  "cliente_id": 1,
+  "produto_id": 1,
+  "quantidade": 2,
+  "preco_unitario": 50.00,
+  "preco_total": 100.00,
+  "data": "2024-07-29T00:00:00Z"
+}
+
+```
+
+### Autenticação
+- Para acessar as rotas protegidas, você precisa incluir o token JWT no cabeçalho da requisição:
+
+### Licença
+- Este projeto está licenciado sob a Licença MIT.
