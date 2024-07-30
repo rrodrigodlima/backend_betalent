@@ -16,7 +16,7 @@ export default class Client extends BaseModel {
   declare cpf: string
 
   @hasMany(() => Address)
-  declare endereço: HasMany<typeof Address>
+  declare endereco: HasMany<typeof Address>
 
   @hasMany(() => Phone)
   declare telefone: HasMany<typeof Phone>

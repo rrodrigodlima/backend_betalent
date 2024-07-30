@@ -18,10 +18,10 @@ export default class Sale extends BaseModel {
   declare quantidade: number
 
   @column()
-  declare preço_unitário: number
+  declare preco_unitario: number
 
   @column()
-  declare preço_total: number
+  declare preco_total: number
 
   @column.dateTime()
   declare saleDate: DateTime
